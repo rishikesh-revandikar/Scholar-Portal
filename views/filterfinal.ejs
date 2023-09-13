@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter page</title>
+    <link rel="stylesheet" href="css/filter1final.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo2.jpg" alt="Scholar'sPortal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#scholarship-search">Scholarship Search</a></li>
+            <!-- <li class="item"><a  href="#information">Information</a></li>
+            <li class="item"><a href="#about-us">About Us</a></li> 
+             <li class="item"><a  href="#contact-us">Contact Us</a></li> -->
+            <li class="item"><a href="#Login">Login/SignUp</a></li>
+            <li class="item"><a href="#SignUp"></a></li>
+            <div class="search">
+                <input type="text" placeholder="Search.." name="search" id="search">
+
+            </div>
+        </ul>
+    </nav>
+
+
+
+
+    <div class="container">
+        <div class="box1">
+        <form class="sidebar" action="/filter" method="POST" >
+            <ul class="mark">
+                <li class="heading">Filters</li>
+                <li>
+                    <select id="qualification" name="qualification" class="select" >
+                        <option value=""> Qualification </option>
+                        <option value="10" >Class X </option>
+                        <option value="12" >Class XII </option>
+                        <option value="all">ALL</option>                                         
+
+                    </select>
+                </li>
+                <li>
+                    <select class="select" id="category" name="category">
+                        <option value="all">Category </option>
+                        <option value="General" >General </option>
+                        <option value="SC" >SC </option>
+                        <option value="ST" >ST </option>
+                        <option value="OBC" >OBC </option>
+                        <option value="SBC" >SBC </option>
+                        <option value="VJNT" >VJNT </option>
+                        <option value="all">ALL</option>
+                                                            </select>
+                </li>
+                <li>
+                    <select class="select" id="income" name="income">
+                        <option value="all">Income </option>
+                        <option value="100000" >100000</option>
+                        <option value="200000" >200000</option>
+                        <option value="300000" >300000</option>
+                        <option value="400000" >400000</option>
+                        <option value="500000" >500000</option>
+                        <option value="600000" >600000</option>
+                        <option value="700000" >700000</option>
+                        <option value="800000" >800000</option>
+                        <option value="900000" >900000</option>
+                        <option value="1000000" >1000000</option>
+                        <option value="all">ALL</option>                                   
+                        
+                    </select>
+                </li>
+
+                <li>
+                    <select class="select" id="grade" name="grade">
+                                                                <option value="all"  selected >Grade </option>
+                                                                <option value="40" >40% </option>
+                                                                <option value="45" >45%</option>
+                                                                <option value="50" >50% </option>
+                                                                <option value="55" >55% </option>
+                                                                <option value="60" >60% </option>
+                                                                <option value="65" >65% </option>
+                                                                <option value="70" >70% </option>
+                                                                <option value="75" >75% </option>
+                                                                <option value="80" >80% </option>
+                                                                <option value="85" >85% </option>
+                                                                <option value="90" >90% </option>
+                                                                <option value="95" >95% </option>
+                                                                <option value="all">ALL</option>
+                        
+                    </select>
+                </li>
+
+                <li>
+                    <select class="select" id="state" name="state">
+                                                                <option value="all"  selected >State </option>
+                                                                <option value="Maharashtra" >maharashtra</option>
+                                                                <option value="other" >other</option>
+                                                                <option value="all">ALL</option>
+                        
+                    </select>
+                </li>
+              
+                <div class="form-group button">
+                    <input name="form_botcheck" class="form-control" type="hidden" value="">
+                    <button type="submit" class="B1"  data-loading-text="Please wait..." onclick="">APPLY </button>
+                    <input type="button" class="B1"  data-loading-text="Please wait..." onclick="Reset();" value="Clear">
+                </div>
+                
+               
+
+            </ul>
+      
+        </form>
+        </div>
+
+
+        <div class="box2">
+            <%   for (let i = 0; i < abc.length ; i++) {    %>
+              <div class="Scholarshipdata">
+                 
+                        <h2> <%= abc[i].name %> </h2>
+                        <div class="inside">
+                        <div class="insideSSleft">
+                            <p>CRITERIA:</p>
+
+                             <% if(!abc[i].state){ %>
+                             <% }else{%> 
+                                <p>STATE:<%= abc[i].state %></p>
+                                <%  }  %>
+
+                            <% if(!abc[i].l_limit){%>
+                            <% }else{ %>
+                                <p>MIN INCOME:  <%= abc[i].l_limit %></p>
+                                <%  }  %>
+
+                            <% if(!abc[i].u_limit){%>
+                            <% }else{%>
+                                <p>MAX INCOME:  <%= abc[i].u_limit %></p>
+                                <%  }  %>
+
+                            <% if(!abc[i].category){ %>
+                            <% }else{%>
+                        <p>CATEGORY:  <%= abc[i].category    %></p>
+                        <%  }  %>
+
+                        <% if(!abc[i].qualification){ %>
+                            <% }else{%>
+                        <p>MIN QUALIFICATION: <%= abc[i].qualification    %></p>
+                        <%  }  %>
+
+                        <% if(!abc[i].grade){ %>
+                            <% }else{%>
+                        <p>MIN GRADE  <%= abc[i].grade    %></p>
+                        <%  }  %>
+
+                        <% if(!abc[i].sp_cri){ %>
+                            <% }else{%>
+                        <p>SPECIAL CRITERIA  <%= abc[i].sp_cri    %></p>
+                        <%  }  %>
+                    </div>
+                    <div class="insideSSright">
+                        
+                        <button type="button" class="B1" data-loading-text="Please wait..."  onclick="window.location.href='<%=abc[i].link %>'">APPLY </button>
+                    </div>
+                </div>
+                     
+              </div>
+              <% }  %>
+          </div>
+
+
+
+
+
+
+
+
+     </div>
+     
+
+
+
+      
+
+
+  
+   
+</body>
+</html>

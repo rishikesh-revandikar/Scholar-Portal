@@ -1,0 +1,193 @@
+/*CSS  Reset*/
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* CSS Variables */
+:root{
+    --navbar-height:59px;
+
+}
+/* Navigation Bar */
+#navbar
+{
+    display: flex;
+    align-items: center;
+    position:sticky;
+    top: 0px;
+}
+#navbar::before{
+    content:" ";
+    background-color:rgb(7, 22, 56) ;
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* Logo and Image */
+#logo
+{
+    margin: 15px 60px;
+
+}
+#logo img{
+    height:60px;
+    margin: 0px 5px;
+}
+/* List styling */
+#navbar ul{
+    display:flex;
+    font-family: 'Baloo Bhai',cursive;
+
+}
+
+#navbar ul li { 
+     /* color: white; */
+     list-style: none;
+     font-size: 1.2rem;
+
+ }
+ #navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 10px;
+    border-radius: 15px;
+    text-decoration: none;
+
+}
+#navbar ul li a:hover {
+    color:black;
+    background-color:white;
+
+} 
+/* Home Section */
+#home
+{
+    display: flex;
+    flex-direction: column ;
+    padding: 3px 200px;
+    height: 570px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before
+{
+    content:" ";
+    position:absolute;
+    background: url('/images/scholarship.jpg') no-repeat center/cover;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index:-1;
+    opacity: 0.89;
+}
+#home h1{
+    color: white;
+    text-align:center;
+    font-family: 'Bree Serif',serif;
+
+}
+#home p{
+    color: white;
+    text-align:center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif',serif;
+
+}
+/* scholarship containers */
+#Information{
+    margin: 34px;
+    display: flex;
+}
+#Information .box{
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 23px;
+    background: #f4e9e9;
+
+}
+#Information .box img{
+    height: 100px; 
+    margin: auto;
+    display: block;  
+}
+#Information .box p{
+    font-family: 'Baloo Bhai',cursive;
+}
+/* #Information
+{
+
+} */
+/*Students section*/
+#student-section
+{
+    height: 344px;
+
+}
+#student-section::before
+{
+    content:"";
+    position: absolute;
+    background:url('');
+    width:100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+
+}
+#students
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.students-item
+{
+    padding: 34px;
+    
+}  
+#students img
+{
+   height: 120px;
+
+}
+/* Utility classses */
+.h-primary
+{
+    font-size: 2.8rem;
+    padding: 12px;
+    font-family: 'Baloo Bhai',cursive;
+
+} 
+.h-secondary
+{
+    font-size: 1.8rem;
+    padding: 12px;
+    font-family: 'Baloo Bhai',cursive;
+
+}
+.btn
+{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color:rgba(229, 240, 28, 0.921) ;
+    color: white;
+    margin: 17px ;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.center
+{
+    text-align:center ;
+}
+

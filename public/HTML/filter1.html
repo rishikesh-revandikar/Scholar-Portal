@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter page</title>
+    <link rel="stylesheet" href="css/filter1.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo.jpeg" alt="Scholar'sPortal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#scholarship-search">Scholarship Search</a></li>
+            <!-- <li class="item"><a  href="#information">Information</a></li>
+            <li class="item"><a href="#about-us">About Us</a></li> 
+             <li class="item"><a  href="#contact-us">Contact Us</a></li> -->
+            <li class="item"><a href="#Login">Login/SignUp</a></li>
+            <li class="item"><a href="#SignUp"></a></li>
+            <div class="search">
+                <input type="text" placeholder="Search.." name="search" id="search">
+
+            </div>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="box1">
+        <form class="sidebar" action="" method="post" >
+            <ul class="mark">
+                <li class="heading">Filters</li>
+                <li>
+                    <select id="qualification" name="qualification" class="select" >
+                        <option value=""> Qualification </option>
+                                                                <!-- <option value="class_i_iv" >Class I - IV </option>
+                                                                <option value="class_v_villl" >Class V - VIII </option>
+                                                                <option value="class_ix_x" >Class IX - X </option>
+                                                                <option value="class_xi_xii" >Class XI - XII </option>
+                                                                <option value="diploma_iti" >Diploma/ITI </option>
+                                                                <option value="graduation" >Graduation </option>
+                                                                <option value="post_graduation" >Post Graduation </option>
+                                                                <option value="p_h_d" >Ph. D. </option> -->
+                                                                <option value="10" >Class X </option>
+                                                                <option value="12" >Class XII </option>
+                                                                <!-- <option value="mbbs" >MBBS </option>
+                                                                <option value="b-tech-" >B.Tech. </option>
+                                                                <option value="mca" >MCA </option>
+                                                                <option value="mba" >MBA </option>
+                                                                <option value="bba" >BBA </option>
+                                                                <option value="bca" >BCA </option>
+                                                                <option value="b-sc-" >B.Sc. </option>
+                                                                <option value="ms" >MS </option>
+                                                                <option value="dnb" >DNB </option>
+                                                                <option value="md" >MD </option>
+                                                                <option value="mds" >MDS </option>
+                                                                <option value="mds3679" >M.CH </option>
+                                                                <option value="me" >ME </option>
+                                                                <option value="m-tech" >M.Tech. </option>
+                                                                <option value="bds" >BDS </option>
+                                                                <option value="bs" >BS </option>
+                                                                <option value="be5128" >BE </option>
+                                                                <option value="b-pharma" >B.Pharma </option>
+                                                                <option value="icai" >ICAI </option>
+                                                                <option value="icwai" >ICWAI </option>
+                                                                <option value="gnm" >GNM </option>
+                                                                <option value="anm" >ANM </option>
+                                                                <option value="not-mentioned" >Not Mentioned </option>
+                                                                <option value="bmlt" >BMLT </option>
+                                                                <option value="dmlt" >DMLT </option> -->
+                        
+
+                    </select>
+                </li>
+                <li>
+                    <select class="select" id="category" name="category">
+                        <option value="">Category </option>
+                                                                <!-- <option value="general" >General </option>
+                                                                <option value="sc_st_obc" >SC/ST/OBC </option>
+                                                                <option value="girls" >Girls </option>
+                                                                <option value="minority" >Minority </option>
+                                                                <option value="physically_challenged" >Physically Challenged </option>
+                                                                <option value="economically_backward_class" >Economically Backward Class </option>
+                                                                <option value="for_all" >For All </option>
+                                                                <option value="obc" >BPL </option>
+                                                                <option value="bpl-below-poverty-line" >BPL-Below Poverty Line </option> -->
+                                                                <option value="General" >General </option>
+                                                                <option value="SC" >SC </option>
+                                                                <option value="ST" >ST </option>
+                                                                <option value="OBC" >OBC </option>
+                                                                <option value="SBC" >SBC </option>
+                                                                <option value="VJNT" >VJNT </option>
+
+                                                            </select>
+                </li>
+                <li>
+                    <select class="select" id="income" name="income">
+                        <option value="">Income </option>
+                                                                <!-- <option value="50000-100000" >50000-100000 </option>
+                                                                <option value="100000-300000" >100000-300000</option>
+                                                                <option value="Above 3 Lakh" >Above 3 Lakh </option> -->
+
+                                                                <option value="100000" >100000</option>
+                                                                <option value="200000" >200000</option>
+                                                                <option value="300000" >300000</option>
+                                                                <option value="400000" >400000</option>
+                                                                <option value="500000" >500000</option>
+                                                                <option value="600000" >600000</option>
+                                                                <option value="700000" >700000</option>
+                                                                <option value="800000" >800000</option>
+                                                                <option value="900000" >900000</option>
+                                                                <option value="1000000" >1000000</option>
+                        
+                    </select>
+                </li>
+                <li>
+                    <select class="select" id="availability" name="availability">
+                                                                <option value=""  selected >Availability </option>
+                                                                <option value="open" >Active </option>
+                                                                <option value="close" >Inactive </option>
+                        
+                    </select>
+                </li>
+
+                <button type="submit" onclick="">Login</button>
+                
+                
+               
+
+            </ul>
+      
+        </form>
+        </div>
+         
+        <div class="box2">
+            <div id="scholarship_container">
+                <div class="resume-item">
+                    <a href="javascript:void(0)" onclick="GoDetails('empowerment-and-equity-opportunities-for-excellence-in-science')"><img src="https://scholarshipforme.com/storage/uploads/others/awv03tus4nsccws8gosk4o8gw4og4g4.webp"
+                        alt="scholarship for me, India's No. 1 scholarship search portal, best scholarship for me">
+                    </a>
+        
+                <div class="right">
+                    <h3>
+                        <a href="javascript:void(0)" onclick="GoDetails('empowerment-and-equity-opportunities-for-excellence-in-science')">Empowerment and Equity Opportunities for Excellence in Science </a>
+        
+                    </h3>
+        
+                    <ul class="skills">
+        
+                                            <li>
+                                <i class="lni lni-map-marker text-primary"></i>
+                                All India
+                            </li>
+                        
+                        <li>
+                            <a class="fb-share "
+                                href="https://www.facebook.com/sharer/sharer.php?u=https://scholarshipforme.com/scholarship_details/empowerment-and-equity-opportunities-for-excellence-in-science"><i
+                                    class="lni lni-facebook text-primary" target="_blank"></i> Share</a>
+                        </li>
+                        <li>
+                            <a class="save-btn fb-share" href="#" id="607"><i
+                                    class="lni lni-bookmark text-primary"></i> Save </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" onclick="GoDetails('empowerment-and-equity-opportunities-for-excellence-in-science')"> <span><small>
+                                                                            <span class="sc-active">Application Open</span>
+                                        
+                                    </small> </span></a>
+                        </li>
+        
+                    </ul>
+                    <p>
+                        <p>Empowerment and Equity Opportunities for Excellence in Science 2023&nbsp;is an opportunity offered by the Science and Engineering Research Board (SERB) to Ph.D. or M.D./M.S./M.D.S./M.V.Sc degree holders.</p>
+                    </p>
+        
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+</body>
+</html>
